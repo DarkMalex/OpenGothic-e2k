@@ -23,7 +23,7 @@ if(MSVC)
 endif()
 
 if(NOT MSVC)
-  target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wconversion -Wno-strict-aliasing -Werror)
+  target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wno-strict-aliasing -Werror)
 
   if(CMAKE_CXX_COMPILER_VERSION VERSION_GREATER_EQUAL "7.1" AND NOT APPLE AND NOT ${CMAKE_CXX_COMPILER_ID} MATCHES "Clang")
     target_compile_options(${PROJECT_NAME} PRIVATE -Wno-format-truncation)
